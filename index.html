@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Saket Kumar — Data Scientist & AI Engineer · 3D Portfolio</title>
+<meta name="description" content="Saket Kumar — Data Scientist & AI Engineer. An interactive 3D journey through my world: projects, skills and story. BSc (Hons.) DS&AI, IIT Guwahati." />
+<link rel="icon" type="image/jpeg" href="assets/profile.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ======= LOADER / START SCREEN ======= -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-mono">SK<span>.</span></div>
+    <h1 class="loader-name">SAKET KUMAR</h1>
+    <p class="loader-sub">Data Scientist · AI Engineer</p>
+    <p class="loader-tag">An interactive 3D journey through the world I'm building</p>
+    <button id="start-btn">START THE JOURNEY</button>
+    <p class="loader-hint">scroll to travel · best experienced fullscreen</p>
+  </div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- ======= 3D CANVAS ======= -->
+<canvas id="scene"></canvas>
+<div id="vignette"></div>
+
+<!-- ======= PROGRESS BAR ======= -->
+<div id="progress-bar"></div>
+
+<!-- ======= NAV ======= -->
+<header id="nav">
+  <a class="nav-logo" href="#" data-goto="0">SK<span>.</span></a>
+  <nav class="nav-links">
+    <a href="#about" data-goto="0.21">About</a>
+    <a href="#skills" data-goto="0.37">Skills</a>
+    <a href="#projects" data-goto="0.48">Projects</a>
+    <a href="#education" data-goto="0.87">Education</a>
+    <a href="#contact" data-goto="0.96">Contact</a>
+  </nav>
+  <a class="nav-cta" href="mailto:k.saket@op.iitg.ac.in">Hire Me</a>
+</header>
+
+<!-- ======= SCROLL HINT ======= -->
+<div id="scroll-hint">
+  <span>SCROLL TO EXPLORE</span>
+  <div class="chevrons"><i></i><i></i><i></i></div>
+</div>
+
+<!-- ======= HTML OVERLAY SECTIONS ======= -->
+<main id="overlay">
+
+  <!-- HERO -->
+  <section class="panel hero" id="hero" data-start="0.0" data-end="0.135">
+    <p class="kicker">DATA SCIENTIST · AI ENGINEER · ML ENGINEER</p>
+    <h1 class="hero-title">SAKET<br/><span class="grad">KUMAR</span></h1>
+    <p class="hero-sub">Turning data into intelligence. Building AI for real-world impact.</p>
+    <p class="hero-quote">“Trust the process, no matter how long it takes.”</p>
+    <div class="hero-chips">
+      <span>🤖 AI / Deep Learning</span>
+      <span>🎓 IIT Guwahati</span>
+      <span>📍 Delhi, India</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="panel side-right" id="about" data-start="0.14" data-end="0.29">
+    <div class="card">
+      <p class="label">// WHO AM I</p>
+      <h2>About Me</h2>
+      <div class="about-photo-wrap">
+        <img class="about-photo" src="assets/profile.jpg" alt="Saket Kumar" />
+      </div>
+      <p>I'm <strong>Saket Kumar</strong> — a relentless learner and builder pursuing my <strong>BSc (Hons.) in Data Science &amp; AI</strong> at the Indian Institute of Technology, Guwahati. I thrive at the intersection of data, intelligence, and real-world impact.</p>
+      <p>From deep-learning forecasting systems to LLMs, RAG pipelines and production AI — I approach every problem with curiosity and perseverance.</p>
+      <ul class="facts">
+        <li><b>📍 Location</b><span>Delhi, India</span></li>
+        <li><b>🎓 Degree</b><span>BSc (Hons.) DS&amp;AI — IIT Guwahati</span></li>
+        <li><b>📧 Email</b><span>k.saket@op.iitg.ac.in</span></li>
+        <li><b>⚡ Status</b><span>Open to internships &amp; collaborations</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="panel side-left" id="skills" data-start="0.30" data-end="0.44">
+    <div class="card">
+      <p class="label">// WHAT I KNOW</p>
+      <h2>Technical Skills</h2>
+      <div class="skill-group">
+        <h3>💻 Languages</h3>
+        <div class="chips"><span>Python</span><span>TypeScript</span><span>R</span><span>SQL</span><span>Java</span><span>C</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>🧠 ML &amp; Deep Learning</h3>
+        <div class="chips"><span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span><span>Keras</span><span>OpenCV</span><span>XGBoost</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>💬 Generative AI &amp; LLMs</h3>
+        <div class="chips"><span>HuggingFace</span><span>LangChain</span><span>RAG</span><span>LoRA / QLoRA</span><span>Ollama</span><span>FAISS</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>☁️ Cloud, MLOps &amp; Data</h3>
+        <div class="chips"><span>Vertex AI</span><span>AWS</span><span>Docker</span><span>FastAPI</span><span>MLflow</span><span>PySpark</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="panel project side-right" id="projects" data-start="0.45" data-end="0.505">
+    <div class="card proj-card">
+      <p class="label">// WHAT I'VE BUILT</p>
+      <span class="proj-num">01</span>
+      <h3>SentinelOps</h3>
+      <p>Local AI Infrastructure &amp; Network Operations Platform — <em>Monitor. Detect. Investigate. Resolve. Locally.</em> An ops control plane that runs entirely on your own hardware.</p>
+      <div class="chips"><span>Python</span><span>Local AI</span><span>NetOps</span><span>Monitoring</span></div>
+      <a class="proj-link" href="https://github.com/saketkumar-18/sentinelops" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </section>
+
+  <section class="panel project side-left" data-start="0.51" data-end="0.565">
+    <div class="card proj-card">
+      <span class="proj-num">02</span>
+      <h3>Smart Disaster Monitoring</h3>
+      <p>Open-source GIS + remote-sensing platform for flood, landslide, wildfire and drought monitoring — satellite data turned into early warning.</p>
+      <div class="chips"><span>TypeScript</span><span>GIS</span><span>Remote Sensing</span><span>Climate AI</span></div>
+      <a class="proj-link" href="https://github.com/saketkumar-18/smart-disaster-monitoring" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </section>
+
+  <section class="panel project side-right" data-start="0.57" data-end="0.625">
+    <div class="card proj-card">
+      <span class="proj-num">03</span>
+      <h3>Multi-Agent Research Assistant</h3>
+      <p>A team of cooperating AI agents that research, cross-verify and synthesize complex topics into clear briefs — agentic AI in practice.</p>
+      <div class="chips"><span>TypeScript</span><span>Agentic AI</span><span>LLMs</span><span>Orchestration</span></div>
+      <a class="proj-link" href="https://github.com/saketkumar-18/multi-agent-research-assistant" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </section>
+
+  <section class="panel project side-left" data-start="0.63" data-end="0.685">
+    <div class="card proj-card">
+      <span class="proj-num">04</span>
+      <h3>MindVault</h3>
+      <p>A personal knowledge vault — capture, organize and retrieve what you learn. A second brain built in Python.</p>
+      <div class="chips"><span>Python</span><span>Knowledge Systems</span><span>Search</span></div>
+      <a class="proj-link" href="https://github.com/saketkumar-18/mindvault" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </section>
+
+  <section class="panel project side-right" data-start="0.69" data-end="0.74">
+    <div class="card proj-card">
+      <span class="proj-num">05</span>
+      <h3>Lost &amp; Found Network</h3>
+      <p>A community network for reporting, matching and recovering lost items — full-stack app with real-time listings.</p>
+      <div class="chips"><span>TypeScript</span><span>Full-Stack</span><span>Community</span></div>
+      <a class="proj-link" href="https://github.com/saketkumar-18/lost-found-network" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </section>
+
+  <section class="panel project side-left" data-start="0.745" data-end="0.79">
+    <div class="card proj-card">
+      <span class="proj-num">06</span>
+      <h3>GhostLink</h3>
+      <p>Links that vanish — ephemeral, private sharing with self-destructing links. Built with TypeScript.</p>
+      <div class="chips"><span>TypeScript</span><span>Privacy</span><span>Security</span></div>
+      <a class="proj-link" href="https://github.com/saketkumar-18/GhostLink" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </section>
+
+  <section class="panel project side-right" data-start="0.79" data-end="0.83">
+    <div class="card proj-card">
+      <span class="proj-num">07</span>
+      <h3>Stock Market Forecasting</h3>
+      <p>High-precision time-series forecasting with LSTM/GRU networks — significantly outperforming classical ARIMA baselines on equity price trends.</p>
+      <div class="chips"><span>LSTM</span><span>PyTorch</span><span>TensorFlow</span><span>Time-Series</span></div>
+      <a class="proj-link" href="https://github.com/saketkumar-18" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="panel center" id="education" data-start="0.84" data-end="0.90">
+    <div class="card">
+      <p class="label">// MY JOURNEY</p>
+      <h2>Education &amp; Background</h2>
+      <div class="edu">
+        <span class="edu-time">2023 — Present</span>
+        <h3>BSc (Hons.) Data Science &amp; Artificial Intelligence</h3>
+        <p class="edu-place">🎓 Indian Institute of Technology, Guwahati</p>
+        <p>Honours at one of India's most prestigious technical institutions. Core curriculum spans machine learning, deep learning, statistical inference, data engineering, algorithm design and AI systems — with research-backed projects and competitive coding along the way.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="panel center" id="contact" data-start="0.91" data-end="1.0">
+    <div class="card contact-card">
+      <p class="label">// LET'S CONNECT</p>
+      <h2>Let's Build Something<br/><span class="grad">Amazing</span></h2>
+      <p>Looking for a data science intern, an AI collaborator, or just want to talk tech? I'm always open to great conversations and meaningful builds.</p>
+      <div class="contact-btns">
+        <a class="btn primary" href="mailto:k.saket@op.iitg.ac.in">📧 k.saket@op.iitg.ac.in</a>
+        <a class="btn" href="https://github.com/saketkumar-18" target="_blank" rel="noopener">🐙 GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/iitgsaketkumar" target="_blank" rel="noopener">💼 LinkedIn</a>
+      </div>
+      <p class="footer">Designed &amp; built with ❤️ by Saket Kumar · © 2026</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======= FALLBACK (no WebGL) ======= -->
+<div id="fallback" hidden>
+  <p>Your browser couldn't start WebGL — showing the static version.</p>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+refs/
+*.pyc
+.DS_Store
+Thumbs.db
