@@ -306,15 +306,16 @@ function makeTree(x, z, s = 1) {
   } });
 }
 
-/* ---------------- PROJECT monuments: 7 towers along the road ---------------- */
+/* ---------------- PROJECT monuments: 8 towers along the road ---------------- */
 const PROJECTS = [
-  { t: 0.485, side:  1 },  // SentinelOps
-  { t: 0.535, side: -1 },  // Smart Disaster Monitoring
-  { t: 0.59,  side:  1 },  // Multi-Agent Research Assistant
-  { t: 0.645, side: -1 },  // MindVault
-  { t: 0.70,  side:  1 },  // Lost & Found Network
-  { t: 0.755, side: -1 },  // GhostLink
-  { t: 0.795, side:  1 },  // Stock Market Forecasting
+  { t: 0.40,  side:  1 },  // RepoLens
+  { t: 0.46,  side: -1 },  // FaithGuard
+  { t: 0.52,  side:  1 },  // DocVQA
+  { t: 0.58,  side: -1 },  // Svara
+  { t: 0.64,  side:  1 },  // Meeting Intelligence
+  { t: 0.70,  side: -1 },  // Medical Report Summarizer
+  { t: 0.76,  side:  1 },  // Yamuna Flood Mapper
+  { t: 0.82,  side: -1 },  // Deepfake Detection
 ];
 PROJECTS.forEach((proj, i) => {
   const p = curve.getPointAt(proj.t);
@@ -359,8 +360,8 @@ PROJECTS.forEach((proj, i) => {
 
 /* ---------------- EDUCATION gate: arch over the road ---------------- */
 {
-  const p = curve.getPointAt(0.83);
-  const tangent = curve.getTangentAt(0.83);
+  const p = curve.getPointAt(0.87);
+  const tangent = curve.getTangentAt(0.87);
   const g = new THREE.Group();
   const pillarGeo = new THREE.BoxGeometry(1.2, 9, 1.2);
   const pillarMat = accentMat(0xffd9a0);

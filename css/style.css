@@ -299,6 +299,7 @@ body {
   margin-bottom: 10px;
 }
 .proj-card .chips { margin: 14px 0 16px; }
+.proj-links { display: flex; gap: 18px; flex-wrap: wrap; }
 .proj-link {
   display: inline-block;
   color: var(--coral-soft);
