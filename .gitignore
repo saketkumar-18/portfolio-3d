@@ -2,3 +2,5 @@ refs/
 *.pyc
 .DS_Store
 Thumbs.db
+.netlify/
+old-site-backup/

@@ -274,7 +274,7 @@ function makeTree(x, z, s = 1) {
   ring.position.y = 4.2;
   ring.rotation.x = Math.PI / 2.4;
   g.add(ring);
-  g.position.set(-13.5, 0, -62);
+  g.position.set(-13.5, 0, -24);
   scene.add(g);
   animated.push({ obj: cap, fn: t => { cap.rotation.y = t * 0.9; cap.position.y = 7.6 + Math.sin(t * 1.4) * 0.3; } });
   animated.push({ obj: ring, fn: t => { ring.rotation.z = t * 0.5; } });
@@ -293,7 +293,7 @@ function makeTree(x, z, s = 1) {
     new THREE.Mesh(new THREE.IcosahedronGeometry(0.55, 0), accentMat(0x7bd7ff)),
   ];
   orbiters.forEach(o => g.add(o));
-  g.position.set(13, 0, -96);
+  g.position.set(13, 0, -44);
   scene.add(g);
   animated.push({ obj: g, fn: t => {
     core.rotation.x = t * 0.4; core.rotation.y = t * 0.6;
@@ -306,16 +306,18 @@ function makeTree(x, z, s = 1) {
   } });
 }
 
-/* ---------------- PROJECT monuments: 8 towers along the road ---------------- */
+/* ---------------- PROJECT monuments: 10 towers along the road ---------------- */
 const PROJECTS = [
-  { t: 0.40,  side:  1 },  // RepoLens
-  { t: 0.46,  side: -1 },  // FaithGuard
-  { t: 0.52,  side:  1 },  // DocVQA
-  { t: 0.58,  side: -1 },  // Svara
-  { t: 0.64,  side:  1 },  // Meeting Intelligence
-  { t: 0.70,  side: -1 },  // Medical Report Summarizer
-  { t: 0.76,  side:  1 },  // Yamuna Flood Mapper
-  { t: 0.82,  side: -1 },  // Deepfake Detection
+  { t: 0.277, side:  1 },  // RepoLens
+  { t: 0.326, side: -1 },  // FaithGuard
+  { t: 0.375, side:  1 },  // DocVQA
+  { t: 0.424, side: -1 },  // Multi-Agent Research Copilot
+  { t: 0.473, side:  1 },  // Medical Report Summarizer
+  { t: 0.557, side: -1 },  // Deepfake Detection
+  { t: 0.606, side:  1 },  // Yamuna Flood Mapper
+  { t: 0.690, side: -1 },  // Svara
+  { t: 0.739, side:  1 },  // Meeting Intelligence
+  { t: 0.788, side: -1 },  // Hinglish ASR
 ];
 PROJECTS.forEach((proj, i) => {
   const p = curve.getPointAt(proj.t);
@@ -360,8 +362,8 @@ PROJECTS.forEach((proj, i) => {
 
 /* ---------------- EDUCATION gate: arch over the road ---------------- */
 {
-  const p = curve.getPointAt(0.87);
-  const tangent = curve.getTangentAt(0.87);
+  const p = curve.getPointAt(0.92);
+  const tangent = curve.getTangentAt(0.92);
   const g = new THREE.Group();
   const pillarGeo = new THREE.BoxGeometry(1.2, 9, 1.2);
   const pillarMat = accentMat(0xffd9a0);

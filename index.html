@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Saket Kumar — Data Scientist & AI Engineer · 3D Portfolio</title>
-<meta name="description" content="Saket Kumar — Data Scientist & AI Engineer. An interactive 3D journey through my world: production AI capstones, skills and story. BSc (Hons.) DS&AI, IIT Guwahati." />
+<meta name="description" content="Saket Kumar — Data Scientist & AI Engineer, IIT Guwahati (CGPA 8.4). 14 projects across LLM & Agentic AI, Computer Vision, Speech and Full-Stack — 6 deployed live. An interactive 3D journey through my work." />
 <link rel="icon" type="image/jpeg" href="assets/profile.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,13 +44,16 @@
 <header id="nav">
   <a class="nav-logo" href="#" data-goto="0">SK<span>.</span></a>
   <nav class="nav-links">
-    <a href="#about" data-goto="0.16">About</a>
-    <a href="#skills" data-goto="0.29">Skills</a>
-    <a href="#projects" data-goto="0.39">Projects</a>
-    <a href="#education" data-goto="0.87">Education</a>
+    <a href="#about" data-goto="0.09">About</a>
+    <a href="#skills" data-goto="0.16">Skills</a>
+    <a href="#projects" data-goto="0.22">Projects</a>
+    <a href="#education" data-goto="0.90">Education</a>
     <a href="#contact" data-goto="0.95">Contact</a>
   </nav>
-  <a class="nav-cta" href="mailto:k.saket@op.iitg.ac.in">Hire Me</a>
+  <div class="nav-ctas">
+    <a class="nav-resume" href="assets/Saket_Kumar_Resume.pdf" download>Resume</a>
+    <a class="nav-cta" href="mailto:k.saket@op.iitg.ac.in">Hire Me</a>
+  </div>
 </header>
 
 <!-- ======= SCROLL HINT ======= -->
@@ -63,28 +66,39 @@
 <main id="overlay">
 
   <!-- HERO -->
-  <section class="panel hero" id="hero" data-start="0.0" data-end="0.115">
+  <section class="panel hero" id="hero" data-start="0.0" data-end="0.080">
+    <img class="hero-photo" src="assets/profile.jpg" alt="Saket Kumar" />
     <p class="kicker">DATA SCIENTIST · AI ENGINEER · ML ENGINEER</p>
     <h1 class="hero-title">SAKET<br/><span class="grad">KUMAR</span></h1>
     <p class="hero-sub">Turning data into intelligence. Building AI for real-world impact.</p>
-    <p class="hero-quote">“Trust the process, no matter how long it takes.”</p>
+    <div class="hero-stats">
+      <div class="stat"><b>8.4</b><span>CGPA · IIT Guwahati</span></div>
+      <div class="stat"><b>14</b><span>Projects Built</span></div>
+      <div class="stat"><b>6</b><span>Apps Live</span></div>
+      <div class="stat"><b>BSc</b><span>DS &amp; AI (Hons.)</span></div>
+    </div>
     <div class="hero-chips">
       <span>🤖 AI / Deep Learning</span>
       <span>🎓 IIT Guwahati</span>
       <span>📍 Delhi, India</span>
+      <span>🟢 Open to Work</span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn primary" href="assets/Saket_Kumar_Resume.pdf" download>📄 Download Resume</a>
+      <a class="btn" href="#projects" data-goto="0.22">🚀 See My Work</a>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="panel side-right" id="about" data-start="0.12" data-end="0.245">
+  <section class="panel side-right" id="about" data-start="0.085" data-end="0.150">
     <div class="card">
       <p class="label">// WHO AM I</p>
       <h2>About Me</h2>
       <div class="about-photo-wrap">
         <img class="about-photo" src="assets/profile.jpg" alt="Saket Kumar" />
       </div>
-      <p>I'm <strong>Saket Kumar</strong> — a relentless learner and builder pursuing my <strong>BSc (Hons.) in Data Science &amp; AI</strong> at the Indian Institute of Technology, Guwahati. I thrive at the intersection of data, intelligence, and real-world impact.</p>
-      <p>Lately I've been shipping a series of production-grade AI capstones — LLM code-review agents, RAG hallucination detection, on-device speech emotion recognition and satellite flood mapping — each one trained, tested and deployed end-to-end.</p>
+      <p>I'm <strong>Saket Kumar</strong> — a relentless learner and builder pursuing my <strong>BSc (Hons.) in Data Science &amp; AI</strong> at the Indian Institute of Technology, Guwahati (CGPA 8.4). I thrive at the intersection of data, intelligence, and real-world impact.</p>
+      <p>I've shipped <strong>14 projects</strong> — from LLM code-review agents and RAG hallucination detectors to on-device speech emotion recognition and satellite flood mapping. Each one is trained, tested, documented and (where possible) deployed live. I build end-to-end: model → eval → API → UI → production.</p>
       <ul class="facts">
         <li><b>📍 Location</b><span>Delhi, India</span></li>
         <li><b>🎓 Degree</b><span>BSc (Hons.) DS&amp;AI — IIT Guwahati</span></li>
@@ -95,7 +109,7 @@
   </section>
 
   <!-- SKILLS -->
-  <section class="panel side-left" id="skills" data-start="0.25" data-end="0.37">
+  <section class="panel side-left" id="skills" data-start="0.155" data-end="0.215">
     <div class="card">
       <p class="label">// WHAT I KNOW</p>
       <h2>Technical Skills</h2>
@@ -118,13 +132,24 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="panel project side-right" id="projects" data-start="0.375" data-end="0.43">
+  <!-- ============ CATEGORY 01 · LLM & AGENTIC AI ============ -->
+  <section class="panel center cat-panel" id="projects" data-start="0.220" data-end="0.250">
+    <div class="cat-head">
+      <span class="cat-icon">🤖</span>
+      <p class="label">// PROJECT CATEGORY 01</p>
+      <h2 class="cat-title">LLM &amp; Agentic AI</h2>
+      <p class="cat-tag">Agents, RAG and evaluation — systems that reason, retrieve and self-correct.</p>
+      <span class="cat-count">5 projects</span>
+    </div>
+  </section>
+
+  <section class="panel project side-right" data-start="0.255" data-end="0.299">
     <div class="card proj-card">
       <p class="label">// WHAT I'VE BUILT</p>
       <span class="proj-num">01</span>
+      <span class="cat-badge llm">LLM &amp; Agentic AI</span>
       <h3>RepoLens</h3>
-      <p>LLM code-review agent with repo-level context — reads a PR diff plus the whole repository via BM25 + reference-graph retrieval, then posts line-level review comments. 65 tests, CI green.</p>
+      <p>LLM code-review agent with repo-level context — reads a PR diff plus the whole repository via BM25 + reference-graph retrieval, then posts line-level review comments to GitHub. 65 tests, CI green.</p>
       <div class="chips"><span>Python</span><span>LLM Agent</span><span>RAG</span><span>GitHub Actions</span></div>
       <div class="proj-links">
         <a class="proj-link" href="https://github.com/saketkumar-18/repolens" target="_blank" rel="noopener">GitHub ↗</a>
@@ -132,11 +157,12 @@
     </div>
   </section>
 
-  <section class="panel project side-left" data-start="0.435" data-end="0.49">
+  <section class="panel project side-left" data-start="0.304" data-end="0.348">
     <div class="card proj-card">
       <span class="proj-num">02</span>
+      <span class="cat-badge llm">LLM &amp; Agentic AI</span>
       <h3>FaithGuard</h3>
-      <p>Hallucination detection &amp; mitigation for RAG — claim-level NLI checks whether each answer is supported by its retrieved context, then auto-corrects via re-retrieval. F1 = 0.887.</p>
+      <p>Hallucination detection &amp; mitigation for RAG — claim-level NLI checks whether each answer is supported by its retrieved context, then auto-corrects via re-retrieval. F1 = 0.887 on SQuAD-based eval.</p>
       <div class="chips"><span>Python</span><span>NLI</span><span>RAG</span><span>LLM Eval</span></div>
       <div class="proj-links">
         <a class="proj-link" href="https://github.com/saketkumar-18/faithguard" target="_blank" rel="noopener">GitHub ↗</a>
@@ -144,11 +170,12 @@
     </div>
   </section>
 
-  <section class="panel project side-right" data-start="0.495" data-end="0.55">
+  <section class="panel project side-right" data-start="0.353" data-end="0.397">
     <div class="card proj-card">
       <span class="proj-num">03</span>
+      <span class="cat-badge llm">LLM &amp; Agentic AI</span>
       <h3>DocVQA</h3>
-      <p>Visual question answering over documents — OCR + layout analysis + BM25 retrieval, answered by an LLM. Scores ANLS 1.000 on a 27-question eval, deployed serverless.</p>
+      <p>Visual question answering over documents — OCR + layout analysis + BM25 retrieval, answered by a grounded LLM. Scores ANLS 1.000 on a 27-question eval, deployed serverless.</p>
       <div class="chips"><span>Python</span><span>OCR</span><span>Retrieval</span><span>FastAPI</span></div>
       <div class="proj-links">
         <a class="proj-link" href="https://docvqa.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
@@ -157,9 +184,86 @@
     </div>
   </section>
 
-  <section class="panel project side-left" data-start="0.555" data-end="0.61">
+  <section class="panel project side-left" data-start="0.402" data-end="0.446">
     <div class="card proj-card">
       <span class="proj-num">04</span>
+      <span class="cat-badge llm">LLM &amp; Agentic AI</span>
+      <h3>Multi-Agent Research Copilot</h3>
+      <p>A team of cooperating AI agents — planner → searcher → writer → critic — that research, cross-verify and synthesize complex topics into cited survey reports with quality evaluation.</p>
+      <div class="chips"><span>Python</span><span>Agentic AI</span><span>Orchestration</span><span>LLMs</span></div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://github.com/saketkumar-18/research-copilot" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel project side-right" data-start="0.451" data-end="0.495">
+    <div class="card proj-card">
+      <span class="proj-num">05</span>
+      <span class="cat-badge llm">LLM &amp; Agentic AI</span>
+      <h3>Medical Report Summarizer</h3>
+      <p>Clinical NLP that summarizes radiology &amp; pathology reports for patients and flags urgency — deterministic triage core with a safety-gated LLM layer. 100% on a 47-case safety eval, deployed live.</p>
+      <div class="chips"><span>Clinical NLP</span><span>LLM</span><span>Safety Eval</span></div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://medical-report-summarizer-phi.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
+        <a class="proj-link" href="https://github.com/saketkumar-18/medical-report-summarizer" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY 02 · COMPUTER VISION ============ -->
+  <section class="panel center cat-panel" data-start="0.500" data-end="0.530">
+    <div class="cat-head">
+      <span class="cat-icon">👁️</span>
+      <p class="label">// PROJECT CATEGORY 02</p>
+      <h2 class="cat-title">Computer Vision &amp; Remote Sensing</h2>
+      <p class="cat-tag">From deepfake forensics to satellite flood mapping — vision that sees what matters.</p>
+      <span class="cat-count">2 projects</span>
+    </div>
+  </section>
+
+  <section class="panel project side-left" data-start="0.535" data-end="0.579">
+    <div class="card proj-card">
+      <span class="proj-num">06</span>
+      <span class="cat-badge cv">Computer Vision</span>
+      <h3>Deepfake Detection</h3>
+      <p>Spatial-temporal CNN/Transformer that flags manipulated video — analyzing which artifacts generalize across generators. Research-grade benchmarking on FF++ and Celeb-DF v2.</p>
+      <div class="chips"><span>CNN</span><span>Transformer</span><span>Forensics</span><span>PyTorch</span></div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://github.com/saketkumar-18/deepfake-detection" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel project side-right" data-start="0.584" data-end="0.628">
+    <div class="card proj-card">
+      <span class="proj-num">07</span>
+      <span class="cat-badge cv">Computer Vision</span>
+      <h3>Yamuna Flood Mapper</h3>
+      <p>Sentinel-1 SAR satellite flood mapping for the Yamuna corridor, Delhi — free satellite data and free hosting turned into an early-warning flood layer for the city I live in.</p>
+      <div class="chips"><span>Sentinel-1</span><span>Remote Sensing</span><span>GIS</span></div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://yamuna-flood-mapper.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
+        <a class="proj-link" href="https://github.com/saketkumar-18/yamuna-flood-mapper" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY 03 · SPEECH & AUDIO ============ -->
+  <section class="panel center cat-panel" data-start="0.633" data-end="0.663">
+    <div class="cat-head">
+      <span class="cat-icon">🎙️</span>
+      <p class="label">// PROJECT CATEGORY 03</p>
+      <h2 class="cat-title">Speech &amp; Audio AI</h2>
+      <p class="cat-tag">Emotion, transcription and Indic speech — audio intelligence on-device and in the browser.</p>
+      <span class="cat-count">3 projects</span>
+    </div>
+  </section>
+
+  <section class="panel project side-left" data-start="0.668" data-end="0.712">
+    <div class="card proj-card">
+      <span class="proj-num">08</span>
+      <span class="cat-badge speech">Speech &amp; Audio</span>
       <h3>Svara</h3>
       <p>Privacy-first on-device voice emotion screener — 6-class speech emotion recognition (CREMA-D) running a 287K-param int8 CNN fully in-browser via WebAssembly. No audio ever leaves the device.</p>
       <div class="chips"><span>ONNX</span><span>WASM</span><span>SER</span><span>On-device</span></div>
@@ -170,11 +274,12 @@
     </div>
   </section>
 
-  <section class="panel project side-right" data-start="0.615" data-end="0.67">
+  <section class="panel project side-right" data-start="0.717" data-end="0.761">
     <div class="card proj-card">
-      <span class="proj-num">05</span>
+      <span class="proj-num">09</span>
+      <span class="cat-badge speech">Speech &amp; Audio</span>
       <h3>Meeting Intelligence</h3>
-      <p>Speaker diarization → transcription → auto summary + action items + who-owns-what. Runs in-browser diarization with Whisper; WER 7.8%, action-item F1 0.947.</p>
+      <p>Speaker diarization → transcription → auto summary + action items + who-owns-what. In-browser ML with sherpa-onnx WASM + Whisper; WER 7.8%, action-item F1 0.947.</p>
       <div class="chips"><span>Diarization</span><span>Whisper</span><span>NLP</span><span>FastAPI</span></div>
       <div class="proj-links">
         <a class="proj-link" href="https://meeting-intelligence-lime.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
@@ -183,46 +288,66 @@
     </div>
   </section>
 
-  <section class="panel project side-left" data-start="0.675" data-end="0.73">
+  <section class="panel project side-left" data-start="0.766" data-end="0.810">
     <div class="card proj-card">
-      <span class="proj-num">06</span>
-      <h3>Medical Report Summarizer</h3>
-      <p>Clinical NLP that summarizes radiology &amp; pathology reports for patients and flags urgency — with a safety-evaluation harness. 100% on a 47-case eval, deployed live.</p>
-      <div class="chips"><span>Clinical NLP</span><span>LLM</span><span>Safety Eval</span></div>
+      <span class="proj-num">10</span>
+      <span class="cat-badge speech">Speech &amp; Audio</span>
+      <h3>Hinglish ASR</h3>
+      <p>Speech recognition tuned for code-switched Hindi-English speech — the way India actually talks. Built for the low-resource, high real-world demand setting.</p>
+      <div class="chips"><span>ASR</span><span>Hinglish</span><span>Low-Resource</span></div>
       <div class="proj-links">
-        <a class="proj-link" href="https://medical-report-summarizer-phi.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
-        <a class="proj-link" href="https://github.com/saketkumar-18/medical-report-summarizer" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="proj-link" href="https://github.com/saketkumar-18/hinglish-asr" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
   </section>
 
-  <section class="panel project side-right" data-start="0.735" data-end="0.79">
-    <div class="card proj-card">
-      <span class="proj-num">07</span>
-      <h3>Yamuna Flood Mapper</h3>
-      <p>Sentinel-1 SAR satellite flood mapping for the Yamuna corridor, Delhi — free satellite data and free hosting turned into an early-warning flood layer.</p>
-      <div class="chips"><span>Sentinel-1</span><span>Remote Sensing</span><span>GIS</span></div>
-      <div class="proj-links">
-        <a class="proj-link" href="https://yamuna-flood-mapper.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
-        <a class="proj-link" href="https://github.com/saketkumar-18/yamuna-flood-mapper" target="_blank" rel="noopener">GitHub ↗</a>
-      </div>
+  <!-- ============ CATEGORY 04 · FULL-STACK & APPLIED ============ -->
+  <section class="panel center cat-panel" data-start="0.815" data-end="0.843">
+    <div class="cat-head">
+      <span class="cat-icon">🛠️</span>
+      <p class="label">// PROJECT CATEGORY 04</p>
+      <h2 class="cat-title">Full-Stack &amp; Applied</h2>
+      <p class="cat-tag">Products people actually use — privacy-first apps, community platforms and dev tools.</p>
+      <span class="cat-count">4 projects</span>
     </div>
   </section>
 
-  <section class="panel project side-left" data-start="0.795" data-end="0.845">
-    <div class="card proj-card">
-      <span class="proj-num">08</span>
-      <h3>Deepfake Detection</h3>
-      <p>Spatial-temporal CNN/Transformer that flags manipulated video — analyzing which artifacts generalize across generators, with research-grade benchmarking.</p>
-      <div class="chips"><span>CNN</span><span>Transformer</span><span>Computer Vision</span><span>Forensics</span></div>
-      <div class="proj-links">
-        <a class="proj-link" href="https://github.com/saketkumar-18/deepfake-detection" target="_blank" rel="noopener">GitHub ↗</a>
+  <section class="panel center" id="more" data-start="0.848" data-end="0.896">
+    <div class="card grid-card">
+      <p class="label">// MORE BUILDS</p>
+      <h2>Full-Stack &amp; Applied</h2>
+      <div class="proj-grid">
+        <div class="mini-card">
+          <h4>👻 GhostLink</h4>
+          <p>Anonymous real-time chat &amp; social discovery — no accounts, ephemeral sessions, self-destructing messages.</p>
+          <div class="chips"><span>React</span><span>Node.js</span><span>WebSockets</span></div>
+          <a class="proj-link" href="https://ghostlink-web-eight.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a class="proj-link" href="https://github.com/saketkumar-18/GhostLink" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="mini-card">
+          <h4>🔎 Lost &amp; Found Network</h4>
+          <p>Privacy-first community platform for lost &amp; found items — smart matching engine, map view, anonymous chat.</p>
+          <div class="chips"><span>Next.js</span><span>PostgreSQL</span><span>Leaflet</span></div>
+          <a class="proj-link" href="https://github.com/saketkumar-18/lost-found-network" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="mini-card">
+          <h4>🧠 MindVault</h4>
+          <p>Local-first private AI knowledge assistant — semantic search &amp; chat with your docs, 100% on-device. No cloud, no telemetry.</p>
+          <div class="chips"><span>Python</span><span>Local LLMs</span><span>RAG</span></div>
+          <a class="proj-link" href="https://github.com/saketkumar-18/mindvault" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="mini-card">
+          <h4>📡 LAN File Share</h4>
+          <p>Zero-config LAN file sharing — upload, download &amp; delete via web UI, with a QR code page for phone access. Single-file FastAPI.</p>
+          <div class="chips"><span>FastAPI</span><span>Python</span><span>Networking</span></div>
+          <a class="proj-link" href="https://github.com/saketkumar-18/lan-file-share" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- EDUCATION -->
-  <section class="panel center" id="education" data-start="0.85" data-end="0.905">
+  <section class="panel center" id="education" data-start="0.900" data-end="0.946">
     <div class="card">
       <p class="label">// MY JOURNEY</p>
       <h2>Education &amp; Background</h2>
@@ -231,18 +356,24 @@
         <h3>BSc (Hons.) Data Science &amp; Artificial Intelligence</h3>
         <p class="edu-place">🎓 Indian Institute of Technology, Guwahati</p>
         <p>Honours at one of India's most prestigious technical institutions. Core curriculum spans machine learning, deep learning, statistical inference, data engineering, algorithm design and AI systems — with research-backed projects and competitive coding along the way.</p>
+        <div class="edu-rows">
+          <div class="edu-row"><span>🎓 BSc (Hons.) DS&amp;AI — IIT Guwahati</span><b>CGPA 8.4</b></div>
+          <div class="edu-row"><span>🏫 Senior Secondary (XII) — Shanti M Academy</span><b>81.2%</b></div>
+          <div class="edu-row"><span>🏫 Secondary (X) — Shanti M Academy</span><b>84.8%</b></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="panel center" id="contact" data-start="0.91" data-end="1.0">
+  <section class="panel center" id="contact" data-start="0.950" data-end="1.0">
     <div class="card contact-card">
       <p class="label">// LET'S CONNECT</p>
       <h2>Let's Build Something<br/><span class="grad">Amazing</span></h2>
       <p>Looking for a data science intern, an AI collaborator, or just want to talk tech? I'm always open to great conversations and meaningful builds.</p>
       <div class="contact-btns">
         <a class="btn primary" href="mailto:k.saket@op.iitg.ac.in">📧 k.saket@op.iitg.ac.in</a>
+        <a class="btn" href="assets/Saket_Kumar_Resume.pdf" download>📄 Resume</a>
         <a class="btn" href="https://github.com/saketkumar-18" target="_blank" rel="noopener">🐙 GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/iitgsaketkumar" target="_blank" rel="noopener">💼 LinkedIn</a>
       </div>
