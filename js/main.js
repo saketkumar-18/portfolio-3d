@@ -405,6 +405,125 @@ PROJECTS.forEach((proj, i) => {
   } });
 }
 
+/* ---------------- HERO companion: low-poly boy waving & talking ----------------
+   Reference: a talking-avatar intro video — the boy stands facing the camera,
+   waves while introducing himself, and keeps gesturing as he speaks. */
+let boyTalking = false;
+const boy = (() => {
+  const g = new THREE.Group();
+  const skin  = new THREE.MeshStandardMaterial({ color: 0xf2b28c, flatShading: true, roughness: 0.9 });
+  const shirt = accentMat(0xff6b4a);
+  const pants = new THREE.MeshStandardMaterial({ color: 0x2b1b3d, flatShading: true, roughness: 1 });
+  const hairM = new THREE.MeshStandardMaterial({ color: 0x241430, flatShading: true, roughness: 1 });
+
+  // legs
+  const legL = new THREE.Mesh(new THREE.BoxGeometry(0.42, 1.3, 0.42), pants);
+  legL.position.set(-0.28, 0.65, 0);
+  const legR = legL.clone(); legR.position.x = 0.28;
+  g.add(legL, legR);
+
+  // torso
+  const torso = new THREE.Mesh(new THREE.BoxGeometry(1.15, 1.5, 0.62), shirt);
+  torso.position.y = 2.05;
+  g.add(torso);
+
+  // arms — pivot groups at the shoulders so they can wave/gesture
+  function makeArm(side) {
+    const pivot = new THREE.Group();
+    pivot.position.set(side * 0.72, 2.62, 0);
+    const arm = new THREE.Mesh(new THREE.BoxGeometry(0.3, 1.25, 0.3), shirt);
+    arm.position.y = -0.62;
+    const hand = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.3, 0.3), skin);
+    hand.position.y = -1.32;
+    pivot.add(arm, hand);
+    g.add(pivot);
+    return pivot;
+  }
+  const armL = makeArm(-1);
+  const armR = makeArm(1);
+
+  // head group (nods & tilts while speaking)
+  const headG = new THREE.Group();
+  headG.position.y = 3.25;
+  const head = new THREE.Mesh(new THREE.BoxGeometry(0.85, 0.85, 0.8), skin);
+  head.position.y = 0.42;
+  const hair = new THREE.Mesh(new THREE.BoxGeometry(0.92, 0.34, 0.88), hairM);
+  hair.position.y = 0.86;
+  const eyeGeo = new THREE.BoxGeometry(0.1, 0.12, 0.05);
+  const eyeMat = new THREE.MeshBasicMaterial({ color: 0x241430 });
+  const eyeL = new THREE.Mesh(eyeGeo, eyeMat); eyeL.position.set(-0.2, 0.5, 0.41);
+  const eyeR = new THREE.Mesh(eyeGeo, eyeMat); eyeR.position.set(0.2, 0.5, 0.41);
+  const mouth = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.09, 0.05),
+    new THREE.MeshBasicMaterial({ color: 0x7a2f2f }));
+  mouth.position.set(0, 0.22, 0.41);
+  headG.add(head, hair, eyeL, eyeR, mouth);
+  g.add(headG);
+
+  g.scale.setScalar(1.15);
+  g.position.set(4.2, -1.05, -3);   // beside the road in the hero zone, feet on ground
+  g.rotation.y = -0.3;              // turned toward the camera path
+  scene.add(g);
+
+  return { g, armL, armR, headG, mouth, torso };
+})();
+
+animated.push({ obj: boy.g, fn: t => {
+  // breathing & body sway
+  boy.torso.scale.y = 1 + Math.sin(t * 2.2) * 0.015;
+  boy.g.rotation.z = Math.sin(t * 1.1) * 0.015;
+
+  // right arm: raised, waving hello (the intro wave from the video)
+  boy.armR.rotation.z = 2.4 + Math.sin(t * 5.5) * 0.35;
+  boy.armR.rotation.x = Math.sin(t * 2.7) * 0.1;
+
+  // left arm: small gestures while talking, relaxed otherwise
+  boy.armL.rotation.z = -(0.16 + (boyTalking ? (0.5 + Math.sin(t * 3.1)) * 0.22 : Math.sin(t * 1.3) * 0.05));
+
+  // head: nods and tilts while speaking
+  boy.headG.rotation.x = boyTalking ? Math.sin(t * 6.3) * 0.05 : Math.sin(t * 1.7) * 0.03;
+  boy.headG.rotation.y = Math.sin(t * 0.9) * 0.12;
+  boy.headG.rotation.z = boyTalking ? Math.sin(t * 3.4) * 0.04 : 0;
+
+  // mouth: opens & closes while talking
+  boy.mouth.scale.y = boyTalking ? 0.4 + Math.abs(Math.sin(t * 9.7)) * 1.7 : 0.35;
+} });
+
+/* ---------------- hero speech bubble: typed intro lines ---------------- */
+const bubbleText = document.getElementById('bubble-text');
+const SPEECH_LINES = [
+  "Hi, I'm Saket — welcome to my world. 👋",
+  "I'm a Data Scientist & AI Engineer from IIT Guwahati.",
+  "I build AI that ships — trained, tested and live.",
+  "Scroll to travel through my journey. 🚀",
+];
+let lineIdx = 0, charIdx = 0, speechPhase = 'idle', speechTimer = 0;
+setInterval(() => {
+  if (!started || speechPhase === 'idle' || !bubbleText) return;
+  const line = SPEECH_LINES[lineIdx];
+  if (speechPhase === 'typing') {
+    boyTalking = true;
+    charIdx++;
+    bubbleText.textContent = line.slice(0, charIdx);
+    if (charIdx >= line.length) { speechPhase = 'hold'; speechTimer = 2600; }
+  } else if (speechPhase === 'hold') {
+    speechTimer -= 55;
+    if (speechTimer <= 0) speechPhase = 'clearing';
+  } else if (speechPhase === 'clearing') {
+    boyTalking = false;
+    charIdx -= 3;
+    if (charIdx <= 0) {
+      charIdx = 0; bubbleText.textContent = '';
+      lineIdx = (lineIdx + 1) % SPEECH_LINES.length;
+      speechPhase = 'pause'; speechTimer = 450;
+    } else {
+      bubbleText.textContent = line.slice(0, charIdx);
+    }
+  } else if (speechPhase === 'pause') {
+    speechTimer -= 55;
+    if (speechTimer <= 0) speechPhase = 'typing';
+  }
+}, 55);
+
 /* ---------------- scroll & panels ---------------- */
 let targetProgress = 0;
 let progress = 0;
@@ -475,6 +594,7 @@ startBtn.addEventListener('click', () => {
   nav.classList.add('visible');
   scrollHint.classList.add('visible');
   document.body.style.overflow = '';
+  speechPhase = 'typing';   // the boy starts his intro
 });
 document.body.style.overflow = 'hidden';
 

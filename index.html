@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Saket Kumar — Data Scientist & AI Engineer · 3D Portfolio</title>
-<meta name="description" content="Saket Kumar — Data Scientist & AI Engineer, IIT Guwahati (CGPA 8.4). 14 projects across LLM & Agentic AI, Computer Vision, Speech and Full-Stack — 6 deployed live. An interactive 3D journey through my work." />
+<meta name="description" content="Saket Kumar — Data Scientist & AI Engineer, IIT Guwahati. 15+ projects across LLM & Agentic AI, Computer Vision, Speech and Full-Stack. An interactive 3D journey through my work." />
 <link rel="icon" type="image/jpeg" href="assets/profile.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -68,10 +68,13 @@
     <p class="kicker">DATA SCIENTIST · AI ENGINEER · ML ENGINEER</p>
     <h1 class="hero-title">SAKET<br/><span class="grad">KUMAR</span></h1>
     <p class="hero-sub">Turning data into intelligence. Building AI for real-world impact.</p>
+    <div class="speech-bubble" id="speech-bubble" aria-live="polite">
+      <span class="bubble-tail"></span>
+      <span class="bubble-text" id="bubble-text"></span><span class="bubble-caret"></span>
+    </div>
     <div class="hero-stats">
-      <div class="stat"><b>8.4</b><span>CGPA · IIT Guwahati</span></div>
-      <div class="stat"><b>6</b><span>Apps Live</span></div>
-      <div class="stat"><b>BSc</b><span>DS &amp; AI (Hons.)</span></div>
+      <div class="stat"><b>15+</b><span>Projects Built</span></div>
+      <div class="stat"><b>BSc</b><span>DS &amp; AI (Hons.) · IIT Guwahati</span></div>
     </div>
     <div class="hero-chips">
       <span>🤖 AI / Deep Learning</span>
@@ -92,7 +95,7 @@
       <div class="about-photo-wrap">
         <img class="about-photo" src="assets/profile.jpg" alt="Saket Kumar" />
       </div>
-      <p>I'm <strong>Saket Kumar</strong> — a Data Scientist &amp; AI Engineer pursuing my <strong>BSc (Hons.) in Data Science &amp; AI</strong> at IIT Guwahati (CGPA 8.4). I build AI that ships — not just demos, but systems that are trained, tested and deployed live.</p>
+      <p>I'm <strong>Saket Kumar</strong> — a Data Scientist &amp; AI Engineer pursuing my <strong>BSc (Hons.) in Data Science &amp; AI</strong> at IIT Guwahati. I build AI that ships — not just demos, but systems that are trained, tested and deployed live.</p>
       <p>My playground spans <strong>LLM agents &amp; RAG, computer vision, on-device speech models and satellite imagery</strong>. My strength is going end-to-end: model → evaluation → API → UI → production, with measurable results — F1, ANLS, WER — backing every claim.</p>
       <ul class="facts">
         <li><b>📍 Location</b><span>Delhi, India</span></li>
@@ -110,19 +113,19 @@
       <h2>Technical Skills</h2>
       <div class="skill-group">
         <h3>💻 Languages</h3>
-        <div class="chips"><span>Python</span><span>TypeScript</span><span>R</span><span>SQL</span><span>Java</span><span>C</span></div>
+        <div class="chips"><span>Python</span><span>TypeScript</span><span>JavaScript</span><span>SQL</span><span>R</span><span>C</span></div>
       </div>
       <div class="skill-group">
         <h3>🧠 ML &amp; Deep Learning</h3>
-        <div class="chips"><span>PyTorch</span><span>TensorFlow</span><span>Scikit-learn</span><span>OpenCV</span><span>XGBoost</span><span>ONNX Runtime</span></div>
+        <div class="chips"><span>PyTorch</span><span>Scikit-learn</span><span>XGBoost</span><span>OpenCV</span><span>ONNX Runtime</span><span>WebAssembly</span></div>
       </div>
       <div class="skill-group">
         <h3>💬 Generative AI &amp; LLMs</h3>
-        <div class="chips"><span>HuggingFace</span><span>LangChain</span><span>RAG</span><span>LoRA / QLoRA</span><span>Whisper</span><span>FAISS</span></div>
+        <div class="chips"><span>HuggingFace</span><span>RAG</span><span>BM25 Retrieval</span><span>NLI</span><span>Whisper</span><span>sherpa-onnx</span></div>
       </div>
       <div class="skill-group">
-        <h3>☁️ Cloud, MLOps &amp; Data</h3>
-        <div class="chips"><span>FastAPI</span><span>Docker</span><span>Vercel</span><span>GitHub Actions</span><span>MLflow</span><span>AWS</span></div>
+        <h3>🛠️ Full-Stack &amp; Cloud</h3>
+        <div class="chips"><span>React</span><span>Next.js</span><span>FastAPI</span><span>Three.js</span><span>Node.js</span><span>GitHub Actions</span><span>Vercel</span><span>Docker</span></div>
       </div>
     </div>
   </section>
@@ -303,7 +306,7 @@
       <p class="label">// PROJECT CATEGORY 04</p>
       <h2 class="cat-title">Full-Stack &amp; Applied</h2>
       <p class="cat-tag">Products people actually use — privacy-first apps, community platforms and dev tools.</p>
-      <span class="cat-count">4 projects</span>
+      <span class="cat-count">5 projects</span>
     </div>
   </section>
 
@@ -313,11 +316,18 @@
       <h2>Full-Stack &amp; Applied</h2>
       <div class="proj-grid">
         <div class="mini-card">
-          <h4>👻 GhostLink</h4>
-          <p>Anonymous real-time chat &amp; social discovery — no accounts, ephemeral sessions, self-destructing messages.</p>
+          <h4>📈 Vriddhi</h4>
+          <p>Self-improving AI trading agent — a Hedge meta-allocator over 7 decorrelated strategies, walk-forward ML with a validation gate, and an adaptive risk overlay. Paper-trading research artifact.</p>
+          <div class="chips"><span>Python</span><span>GBM</span><span>Walk-Forward</span><span>Risk</span></div>
+          <a class="proj-link" href="https://vriddhi-trading-agent.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a class="proj-link" href="https://github.com/saketkumar-18/vriddhi" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="mini-card">
+          <h4>👻 Persona</h4>
+          <p>Privacy-first social discovery &amp; real-time chat — no accounts: ephemeral JWT sessions, E2E-encrypted self-destructing rooms, on-device location coarsening, QR/invite pairing.</p>
           <div class="chips"><span>React</span><span>Node.js</span><span>WebSockets</span></div>
-          <a class="proj-link" href="https://ghostlink-web-eight.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
-          <a class="proj-link" href="https://github.com/saketkumar-18/GhostLink" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="proj-link" href="https://persona-chat.vercel.app" target="_blank" rel="noopener">Live Demo ↗</a>
+          <a class="proj-link" href="https://github.com/saketkumar-18/persona" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
         <div class="mini-card">
           <h4>🔎 Lost &amp; Found Network</h4>
@@ -351,11 +361,6 @@
         <h3>BSc (Hons.) Data Science &amp; Artificial Intelligence</h3>
         <p class="edu-place">🎓 Indian Institute of Technology, Guwahati</p>
         <p>Honours at one of India's most prestigious technical institutions. Core curriculum spans machine learning, deep learning, statistical inference, data engineering, algorithm design and AI systems — with research-backed projects and competitive coding along the way.</p>
-        <div class="edu-rows">
-          <div class="edu-row"><span>🎓 BSc (Hons.) DS&amp;AI — IIT Guwahati</span><b>CGPA 8.4</b></div>
-          <div class="edu-row"><span>🏫 Senior Secondary (XII) — Shanti M Academy</span><b>81.2%</b></div>
-          <div class="edu-row"><span>🏫 Secondary (X) — Shanti M Academy</span><b>84.8%</b></div>
-        </div>
       </div>
     </div>
   </section>
@@ -367,9 +372,18 @@
       <h2>Let's Build Something<br/><span class="grad">Amazing</span></h2>
       <p>Looking for a data science intern, an AI collaborator, or just want to talk tech? I'm always open to great conversations and meaningful builds.</p>
       <div class="contact-btns">
-        <a class="btn primary" href="mailto:k.saket@op.iitg.ac.in">📧 k.saket@op.iitg.ac.in</a>
-        <a class="btn" href="https://github.com/saketkumar-18" target="_blank" rel="noopener">🐙 GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/iitgsaketkumar" target="_blank" rel="noopener">💼 LinkedIn</a>
+        <a class="btn icon-btn" href="mailto:k.saket@op.iitg.ac.in" title="Outlook — k.saket@op.iitg.ac.in" aria-label="Email (Outlook)">
+          <img src="assets/icons/outlook.svg" alt="" /><span>k.saket@op.iitg.ac.in</span>
+        </a>
+        <a class="btn icon-btn" href="mailto:saketanand9693@gmail.com" title="Gmail — saketanand9693@gmail.com" aria-label="Email (Gmail)">
+          <img src="assets/icons/gmail.svg" alt="" /><span>saketanand9693@gmail.com</span>
+        </a>
+        <a class="btn icon-btn" href="https://github.com/saketkumar-18" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+          <img src="assets/icons/github.svg" alt="" /><span>GitHub</span>
+        </a>
+        <a class="btn icon-btn" href="https://www.linkedin.com/in/iitgsaketkumar" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+          <img src="assets/icons/linkedin.svg" alt="" /><span>LinkedIn</span>
+        </a>
       </div>
       <p class="footer">Designed &amp; built with ❤️ by Saket Kumar · © 2026</p>
     </div>

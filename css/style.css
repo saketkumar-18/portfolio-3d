@@ -256,6 +256,65 @@ body {
 .hero-stats .stat span { font-size: 0.72rem; letter-spacing: 1px; color: rgba(255, 244, 230, 0.75); }
 .hero-actions { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
+/* ---------- hero speech bubble (talking-intro, video-style) ---------- */
+.speech-bubble {
+  position: relative;
+  margin-top: 22px;
+  max-width: 620px;
+  min-height: 52px;
+  background: rgba(26, 15, 46, 0.62);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 14px 22px;
+  font-size: clamp(0.88rem, 1.6vw, 1.02rem);
+  line-height: 1.5;
+  color: rgba(255, 244, 230, 0.95);
+  text-align: left;
+  box-shadow: 0 14px 40px rgba(15, 5, 30, 0.4);
+  animation: bubbleFloat 4s ease-in-out infinite;
+}
+@keyframes bubbleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.bubble-tail {
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  width: 16px; height: 16px;
+  background: rgba(26, 15, 46, 0.62);
+  border-left: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-border);
+  transform: translateX(-50%) rotate(45deg);
+}
+.bubble-caret {
+  display: inline-block;
+  width: 2px; height: 1.05em;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  background: var(--sand);
+  animation: caretBlink 0.9s steps(1) infinite;
+}
+@keyframes caretBlink { 50% { opacity: 0; } }
+
+/* ---------- contact icon buttons ---------- */
+.btn.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn.icon-btn img {
+  width: 20px; height: 20px;
+  flex: 0 0 auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+  transition: transform 0.25s;
+}
+.btn.icon-btn:hover img { transform: scale(1.18) rotate(-6deg); }
+.btn.icon-btn.primary img { filter: none; }
+
 /* ---------- cards ---------- */
 .card {
   pointer-events: auto;
